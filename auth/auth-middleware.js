@@ -4,9 +4,8 @@ const Users = require("../users/users-model")
 
 module.exports = authenticate;
 
-
 function authenticate(req, res, next) {
-    const {username,password} = req.headers;
+    const {username, password} = req.headers;
 
     Users.findBy({username})
     .first()
